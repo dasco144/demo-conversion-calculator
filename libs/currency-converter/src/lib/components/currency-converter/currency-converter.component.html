@@ -1,0 +1,116 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutAlign="start start"
+     fxLayoutAlign.xs="start center">
+
+  <div fxLayout>
+    <h2 i18n="currency converter header">Currency Converter</h2>
+
+    <button mat-flat-button
+            color="primary"
+            (click)="navigateToHistory()"
+            i18n="view history button"
+            disabled="{{initialLoad || (loading$ | async)}}">
+      <!-- TODO Add unit test for this routing method -->
+      <!-- TODO Run all unit/e2e tests again -->
+      View History
+    </button>
+  </div>
+
+  <ng-container *ngIf="rate$ | async"></ng-container>
+
+  <div class="container"
+       *ngIf="initialLoad"
+       fxFlexAlign="center"
+       fxLayout
+       fxLayoutAlign="center center">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+
+  <ng-container *ngIf="currencyFormGroup">
+    <form [formGroup]="currencyFormGroup">
+
+      <div formGroupName="from">
+
+        <h4 i18n="from form header">From</h4>
+
+        <mat-form-field class="currency">
+          <mat-label *ngIf="loading$ | async">
+            <div class="spinner-wrapper">
+              <span>
+                <ng-container i18n="select loader">
+                  Loading...
+                </ng-container>
+              </span>
+              <mat-spinner class="spinner"
+                           diameter="20"></mat-spinner>
+            </div>
+          </mat-label>
+
+          <mat-label *ngIf="(loading$ | async) === false"
+                     i18n="currency label">Currency</mat-label>
+
+          <mat-select formControlName="currency">
+            <ng-container *ngIf="rate$ | async as currencyRate">
+              <mat-option *ngFor="let rate of (currencyRate.rates | keyvalue)"
+                          [value]="rate.key">
+                {{ rate.key }}
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="value">
+          <mat-label i18n="value label">Value</mat-label>
+
+          <input matInput
+                 [demoCurrencySymbolMask]="currencyFormGroup.get('from.currency').value"
+                 type="text"
+                 formControlName="value">
+        </mat-form-field>
+
+      </div>
+
+      <div formGroupName="to">
+
+        <h4 i18n="to form header">To</h4>
+
+        <mat-form-field class="currency">
+          <mat-label *ngIf="(loading$ | async) === false"
+                     i18n="currency label">Currency</mat-label>
+
+          <mat-label *ngIf="loading$ | async">
+            <div class="spinner-wrapper">
+              <ng-container i18n="select loader">
+                <span>Loading...</span>
+              </ng-container>
+              <mat-spinner class="spinner"
+                           diameter="20"></mat-spinner>
+            </div>
+          </mat-label>
+
+          <mat-select formControlName="currency">
+            <ng-container *ngIf="rate$ | async as currencyRate">
+              <mat-option *ngFor="let rate of (currencyRate.rates | keyvalue)"
+                          [value]="rate.key">
+                {{ rate.key }}
+              </mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="value">
+          <mat-label i18n="value label">Value</mat-label>
+
+          <input matInput
+                 [demoCurrencySymbolMask]="currencyFormGroup.get('to.currency').value"
+                 type="text"
+                 formControlName="value">
+        </mat-form-field>
+
+      </div>
+
+    </form>
+  </ng-container>
+
+</div>

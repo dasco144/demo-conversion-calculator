@@ -1,0 +1,40 @@
+{
+  "npmScope": "demo",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "conversion-calculator": {
+      "tags": ["app", "conversion"]
+    },
+    "conversion-calculator-e2e": {
+      "tags": [],
+      "implicitDependencies": ["conversion-calculator"]
+    },
+    "currency-converter": {
+      "tags": ["feature", "conversion"]
+    },
+    "length-converter": {
+      "tags": ["feature", "conversion"]
+    }
+  }
+}

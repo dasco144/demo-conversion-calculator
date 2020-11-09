@@ -1,0 +1,56 @@
+<div class="container"
+     fxLayout="column">
+
+  <mat-toolbar class="toolbar"
+               color="primary">
+    <button mat-icon-button
+            (click)="toggleSidenav(true)">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>
+      <ng-container i18n="App component header">
+        Conversion Calculator
+      </ng-container>
+    </span>
+  </mat-toolbar>
+
+  <mat-drawer-container class="sidenav-container"
+                        fxFlex="1 1 auto"
+                        autosize>
+    <mat-drawer #sidenav
+                class="sidenav"
+                mode="side"
+                [autoFocus]="false">
+
+      <mat-nav-list>
+        <mat-list-item (click)="toggleSidenav()"
+                       [routerLink]="['/currency']"
+                       routerLinkActive="mat-list-single-selected-option">
+          <mat-icon>euro_symbol</mat-icon>
+          &nbsp;
+          <ng-container i18n="sidebar currency converter link">
+            Currency
+          </ng-container>
+        </mat-list-item>
+
+        <mat-list-item (click)="toggleSidenav()"
+                       [routerLink]="['/length']"
+                       routerLinkActive="mat-list-single-selected-option">
+          <mat-icon>square_foot</mat-icon>
+          &nbsp;
+          <ng-container i18n="sidebar length converter link">
+            Length
+          </ng-container>
+        </mat-list-item>
+      </mat-nav-list>
+
+    </mat-drawer>
+
+    <div class="sidenav-content"
+         fxFlexFill>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
+
+</div>

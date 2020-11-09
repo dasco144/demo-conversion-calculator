@@ -1,0 +1,67 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutAlign="start start"
+     fxLayoutAlign.xs="start center">
+
+  <h2 i18n="length converter header">Length Converter</h2>
+
+  <ng-container *ngIf="lengthFormGroup">
+    <form [formGroup]="lengthFormGroup">
+
+      <div formGroupName="from">
+
+        <h4 i18n="from form header">From</h4>
+
+        <mat-form-field class="unit">
+          <mat-label i18n="unit label">Unit</mat-label>
+
+          <mat-select formControlName="unit">
+            <mat-option *ngFor="let unit of lengthConversionUnits"
+                        [value]="unit.base">
+              {{ unit.base }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="value">
+          <mat-label i18n="value label">Value</mat-label>
+
+          <input matInput
+                 [demoLengthSymbolMask]="lengthFormGroup.get('from.unit').value"
+                 type="text"
+                 formControlName="value">
+        </mat-form-field>
+
+      </div>
+
+      <div formGroupName="to">
+
+        <h4 i18n="to form header">To</h4>
+
+        <mat-form-field class="unit">
+          <mat-label i18n="unit label">Unit</mat-label>
+
+          <mat-select formControlName="unit">
+            <mat-option *ngFor="let unit of lengthConversionUnits"
+                        [value]="unit.base">
+              {{ unit.base }}
+            </mat-option>
+          </mat-select>
+
+        </mat-form-field>
+
+        <mat-form-field class="value">
+          <mat-label i18n="value label">Value</mat-label>
+
+          <input matInput
+                 [demoLengthSymbolMask]="lengthFormGroup.get('to.unit').value"
+                 type="text"
+                 formControlName="value">
+        </mat-form-field>
+
+      </div>
+
+    </form>
+  </ng-container>
+
+</div>

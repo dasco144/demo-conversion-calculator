@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="f425cc9e1788230f513f9022ffdb154aa9ad003b" datatype="html">
+        <source>
+        Conversion Calculator
+      </source>
+        <target>
+        Omskakelingsrekenaar
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">App component header</note>
+      </trans-unit>
+      <trans-unit id="97ad6b1442963a31772b01376186e18ba42f9f26" datatype="html">
+        <source>
+            Currency
+          </source>
+        <target>
+            Geldeenheid
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">sidebar currency converter link</note>
+      </trans-unit>
+      <trans-unit id="10c0f0c73a950f654852be15a061ab7f6e1b1f0d" datatype="html">
+        <source>
+            Length
+          </source>
+        <target>
+            Lengte
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">sidebar length converter link</note>
+      </trans-unit>
+      <trans-unit id="eef138bc06967d5c0951b3b48927b337530714bb" datatype="html">
+        <source>Currency Converter</source>
+        <target>Geldeenheid Omskakelaar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">currency converter header</note>
+      </trans-unit>
+      <trans-unit id="cd9a740f2a50e14cfe046522c873e198129a2e9b" datatype="html">
+        <source>
+
+
+      View History
+    </source>
+        <target>
+
+
+      Kyk Geskiedenis
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">view history button</note>
+      </trans-unit>
+      <trans-unit id="d5e0dbc9fd4651759df915cdc6ba26fe3f17475f" datatype="html">
+        <source>From</source>
+        <target>Van</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">from form header</note>
+      </trans-unit>
+      <trans-unit id="9b4ad21d108021c59c1a95332c5e9a137cabe5b3" datatype="html">
+        <source>
+                  Loading...
+                </source>
+        <target>
+                  Laai tans...
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">select loader</note>
+      </trans-unit>
+      <trans-unit id="32072c7fb0469aaf82d256a59b3e0d6ecce973b9" datatype="html">
+        <source>Currency</source>
+        <target>Geldeenheid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">currency label</note>
+      </trans-unit>
+      <trans-unit id="5049e204c14c648691ac775a64fb504467aeb549" datatype="html">
+        <source>Value</source>
+        <target>Waarde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">value label</note>
+      </trans-unit>
+      <trans-unit id="63c9c3aa536dbd11120ae8feab62186c47838028" datatype="html">
+        <source>To</source>
+        <target>Aan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">to form header</note>
+      </trans-unit>
+      <trans-unit id="a65e9e3fcad25e151fa3557e9fcc80b378deeb0c" datatype="html">
+        <source>
+                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Loading...<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+              </source>
+        <target>
+                <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Laai tans...<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>
+              </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/currency-converter/currency-converter.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <note priority="1" from="description">select loader</note>
+      </trans-unit>
+      <trans-unit id="b9d2e933a0702d3cc69104c213edb40e44fde64b" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{base}}"/> to <x id="INTERPOLATION_1" equiv-text="{{compareRate}}"/> exchange history</source>
+        <target><x id="INTERPOLATION" equiv-text="{{base}}"/> aan <x id="INTERPOLATION_1" equiv-text="{{compareRate}}"/> ruil geskiedenis uit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/rate-history/rate-history.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">exhange history header</note>
+      </trans-unit>
+      <trans-unit id="73339760fe932d2b494728d4366947755d127e00" datatype="html">
+        <source>Week</source>
+        <target>Week</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/rate-history/rate-history.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">week</note>
+      </trans-unit>
+      <trans-unit id="5bb4a09a669f55893c9a37a8480c8fa3f7ce5702" datatype="html">
+        <source>Month</source>
+        <target>Maand</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/rate-history/rate-history.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">month</note>
+      </trans-unit>
+      <trans-unit id="f6e04edea3bb3a59d5904725bfbc2c440e793001" datatype="html">
+        <source>Year</source>
+        <target>Jaar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/rate-history/rate-history.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">year</note>
+      </trans-unit>
+      <trans-unit id="fd966a55a9d8174e64bf096d0247ba9e1659008e" datatype="html">
+        <source>
+      Back
+    </source>
+        <target>
+      Terug
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/currency-converter/src/lib/components/rate-history/rate-history.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">back button</note>
+      </trans-unit>
+      <trans-unit id="06de6cabc97bcf6b22f1d23efffa5fdbf5377735" datatype="html">
+        <source>Length Converter</source>
+        <target>Lengte Omskakelaar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">length converter header</note>
+      </trans-unit>
+      <trans-unit id="4cf0728fcf2b0af16de94c2f57dafddcc0ff1a59" datatype="html">
+        <source>Unit</source>
+        <target>Eenheid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../libs/length-converter/src/lib/components/length-converter/length-converter.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">unit label</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

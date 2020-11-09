@@ -1,0 +1,47 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutAlign="start start">
+
+  <!-- FIXME Mobile layout for this component needs work -->
+  <div fxLayout>
+    <h2 i18n="exhange history header">{{base}} to {{compareRate}} exchange history</h2>
+
+    <mat-button-toggle-group name="fontStyle"
+                             [(ngModel)]="period">
+      <mat-button-toggle value="week"
+                         i18n="week">Week</mat-button-toggle>
+      <mat-button-toggle value="month"
+                         i18n="month">Month</mat-button-toggle>
+      <mat-button-toggle value="year"
+                         i18n="year">Year</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <button mat-flat-button
+            color="primary"
+            (click)="navigateBack()"
+            i18n="back button">
+      Back
+    </button>
+  </div>
+
+  <div *ngIf="loading"
+       class="container"
+       fxFlexAlign="center"
+       fxLayout
+       fxLayoutAlign="center center">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+
+  <ng-container *ngIf="!loading">
+    <canvas baseChart
+            height="400"
+            width="800"
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions"
+            [colors]="chartColours"
+            [chartType]="'line'"
+            [plugins]="chartPlugins"></canvas>
+  </ng-container>
+
+</div>
