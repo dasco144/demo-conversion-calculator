@@ -66,9 +66,14 @@
               ]
             },
             "afr": {
-              "localize": ["afr"]
+              "localize": [
+                "afr"
+              ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -116,7 +121,10 @@
             ],
             "scripts": [],
             "assets": []
-          }
+          },
+          "outputs": [
+            "coverage/apps/conversion-calculator"
+          ]
         }
       }
     },
@@ -141,7 +149,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/conversion-calculator-e2e/tsconfig.e2e.json"],
+            "tsConfig": [
+              "apps/conversion-calculator-e2e/tsconfig.e2e.json"
+            ],
             "exclude": [
               "**/node_modules/**",
               "!apps/conversion-calculator-e2e/**/*"
@@ -163,7 +173,10 @@
               "libs/currency-converter/tsconfig.lib.json",
               "libs/currency-converter/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/currency-converter/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/currency-converter/**/*"
+            ]
           }
         },
         "test": {
@@ -172,7 +185,10 @@
             "main": "libs/currency-converter/src/test.ts",
             "tsConfig": "libs/currency-converter/tsconfig.spec.json",
             "karmaConfig": "libs/currency-converter/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/currency-converter"
+          ]
         }
       },
       "schematics": {
@@ -194,7 +210,10 @@
               "libs/length-converter/tsconfig.lib.json",
               "libs/length-converter/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/length-converter/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/length-converter/**/*"
+            ]
           }
         },
         "test": {
@@ -203,7 +222,10 @@
             "main": "libs/length-converter/src/test.ts",
             "tsConfig": "libs/length-converter/tsconfig.spec.json",
             "karmaConfig": "libs/length-converter/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/length-converter"
+          ]
         }
       },
       "schematics": {
