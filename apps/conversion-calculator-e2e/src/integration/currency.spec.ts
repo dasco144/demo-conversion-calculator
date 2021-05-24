@@ -37,7 +37,7 @@ describe('currency-conversion', function () {
 
     it('should convert to value when updating from value', function () {
       cy.wait('@zarRates').then((xhr) => {
-        const zarRate = xhr.response.body as any;
+        const zarRate = xhr.response.body as Cypress.ObjectLike;
         const value = '123';
         cy.get('@fromForm').find('input[formControlName="value"]').type(value);
 
@@ -57,7 +57,7 @@ describe('currency-conversion', function () {
 
     it('should convert from value when updating to value', function () {
       cy.wait('@zarRates').then((xhr) => {
-        const zarRate = xhr.response.body as any;
+        const zarRate = xhr.response.body as Cypress.ObjectLike;
         const value = '123';
         const toCurrency = 'AUD';
 

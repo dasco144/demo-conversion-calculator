@@ -18,7 +18,7 @@ import { decimalCount, precisionHelper } from '../functions/precision-helpers';
   selector: '[formControlName][demoLengthSymbolMask]'
 })
 export class LengthSymbolMaskDirective implements OnChanges {
-  // tslint:disable-next-line: no-input-rename
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('demoLengthSymbolMask') unit: string;
 
   private previousValue = '0';

@@ -7,18 +7,19 @@ import 'zone.js/dist/zone-testing';
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
+  platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
+
 
 // Attempt to mock global $localize function.
 import Spy = jasmine.Spy;
 import createSpy = jasmine.createSpy;
 
-// tslint:disable-next-line:variable-name
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const _global: any = typeof global !== 'undefined' && global;
 const defaultFakedLocalizeTranslate: (messageParts: TemplateStringsArray,
-                                      substitutions: readonly any[]) => [TemplateStringsArray, readonly any[]] =
-  (messageParts: TemplateStringsArray, substitutions: readonly any[]) => {
+                                      substitutions: readonly unknown[]) => [TemplateStringsArray, readonly unknown[]] =
+  (messageParts: TemplateStringsArray, substitutions: readonly unknown[]) => {
     return [messageParts, substitutions];
   };
 
@@ -30,6 +31,7 @@ declare global {
   const mockLocalize: Spy;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const require: any;
 
 // First, initialize the Angular testing environment.

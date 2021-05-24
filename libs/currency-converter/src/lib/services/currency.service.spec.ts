@@ -11,7 +11,8 @@ import { of, throwError } from 'rxjs';
 import { CurrencyRate } from '../models/currency-rate';
 import {
   CurrencyRateHistory,
-  CurrencyRateHistoryDto
+  CurrencyRateHistoryDto,
+  RateHistoryDto
 } from '../models/currency-rate-history';
 import { loadCurrencyRate } from '../store/currency.actions';
 import { sampleRates } from '../store/currency.reducer.spec';
@@ -85,18 +86,21 @@ describe('CurrencyService', () => {
     beforeEach(() => {
       base = 'ZAR';
       compare = 'AUD';
+
+      const rates: RateHistoryDto = {
+        '2020-11-07': {
+          [compare]: 1
+        },
+        '2020-11-08': {
+          [compare]: 1.2
+        }
+      };
+
       history = {
         base,
         start_at: '2020-11-07',
         end_at: '2020-11-08',
-        rates: {
-          '2020-11-07': {
-            [compare]: 1
-          } as any,
-          '2020-11-08': {
-            [compare]: 1.2
-          } as any
-        }
+        rates
       };
     });
 

@@ -8,8 +8,8 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
-declare namespace Cypress {
-  interface Chainable<Subject> {
+declare module 'Cypress' {
+  interface Chainable {
     login(email: string, password: string): void;
   }
 }

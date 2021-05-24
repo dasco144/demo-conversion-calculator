@@ -7,4 +7,4 @@ export const CURRENCY_PRECISION_TOKEN = new InjectionToken<number>(
 
 export const currencyPrecisionAmount = 2;
 
-export const maskRegex = /[^\d\.]/g;
+export const maskRegex = /[^\d.]/g;
