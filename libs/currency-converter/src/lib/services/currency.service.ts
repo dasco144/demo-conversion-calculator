@@ -32,7 +32,7 @@ export class CurrencyService {
     period: 'week' | 'month' | 'year'
   ): Promise<CurrencyRateHistory> {
     try {
-      const baseUrl = 'https://api.ratesapi.io/api/';
+      const baseUrl = 'https://api.exchangerate.host/';
       const baseQueryParam = `base=${currencyCode}`;
       const symbolsQueryParam = `symbols=${compareRate}`;
 
