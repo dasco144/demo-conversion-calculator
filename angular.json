@@ -1,5 +1,18 @@
 {
   "version": 1,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "conversion-calculator",
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "karma"
+    }
+  },
   "projects": {
     "conversion-calculator": {
       "projectType": "application",
@@ -66,14 +79,10 @@
               ]
             },
             "afr": {
-              "localize": [
-                "afr"
-              ]
+              "localize": ["afr"]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -96,16 +105,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "tsConfig": [
-              "apps/conversion-calculator/tsconfig.app.json",
-              "apps/conversion-calculator/tsconfig.spec.json",
-              "apps/conversion-calculator/tsconfig.editor.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/conversion-calculator/**/*"
+            "lintFilePatterns": [
+              "apps/conversion-calculator/src/**/*.ts",
+              "apps/conversion-calculator/src/**/*.html"
             ]
           }
         },
@@ -122,9 +126,7 @@
             "scripts": [],
             "assets": []
           },
-          "outputs": [
-            "coverage/apps/conversion-calculator"
-          ]
+          "outputs": ["coverage/apps/conversion-calculator"]
         }
       }
     },
@@ -147,15 +149,9 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "tsConfig": [
-              "apps/conversion-calculator-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/conversion-calculator-e2e/**/*"
-            ]
+            "lintFilePatterns": ["apps/conversion-calculator-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -167,15 +163,11 @@
       "prefix": "demo",
       "architect": {
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "tsConfig": [
-              "libs/currency-converter/tsconfig.lib.json",
-              "libs/currency-converter/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/currency-converter/**/*"
+            "lintFilePatterns": [
+              "libs/currency-converter/src/**/*.ts",
+              "libs/currency-converter/src/**/*.html"
             ]
           }
         },
@@ -186,9 +178,7 @@
             "tsConfig": "libs/currency-converter/tsconfig.spec.json",
             "karmaConfig": "libs/currency-converter/karma.conf.js"
           },
-          "outputs": [
-            "coverage/libs/currency-converter"
-          ]
+          "outputs": ["coverage/libs/currency-converter"]
         }
       },
       "schematics": {
@@ -204,15 +194,11 @@
       "prefix": "demo",
       "architect": {
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "tsConfig": [
-              "libs/length-converter/tsconfig.lib.json",
-              "libs/length-converter/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/length-converter/**/*"
+            "lintFilePatterns": [
+              "libs/length-converter/src/**/*.ts",
+              "libs/length-converter/src/**/*.html"
             ]
           }
         },
@@ -223,9 +209,7 @@
             "tsConfig": "libs/length-converter/tsconfig.spec.json",
             "karmaConfig": "libs/length-converter/karma.conf.js"
           },
-          "outputs": [
-            "coverage/libs/length-converter"
-          ]
+          "outputs": ["coverage/libs/length-converter"]
         }
       },
       "schematics": {
@@ -234,52 +218,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/workspace": {
-      "library": {
-        "linter": "tslint"
-      }
-    },
-    "@nrwl/cypress": {
-      "cypress-project": {
-        "linter": "tslint"
-      }
-    },
-    "@nrwl/node": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
-    },
-    "@nrwl/nest": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
-    },
-    "@nrwl/express": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "unitTestRunner": "karma",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "karma"
-    }
-  },
-  "defaultProject": "conversion-calculator"
+  }
 }

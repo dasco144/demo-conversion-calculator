@@ -8,7 +8,10 @@ import { ActivatedRoute, Navigation, Router } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { MockModule } from 'ng-mocks';
 import { ChartsModule } from 'ng2-charts';
-import { CurrencyRateHistory } from '../../models/currency-rate-history';
+import {
+  CurrencyRateHistory,
+  RateHistoryDto
+} from '../../models/currency-rate-history';
 import { CurrencyService } from '../../services/currency.service';
 import { CurrencyCodes } from '../../types/currency-codes';
 import { RateHistoryComponent } from './rate-history.component';
@@ -41,13 +44,13 @@ describe('RateHistoryComponent', () => {
 
     mockActivatedRoute = new ActivatedRoute();
 
-    const rates = {
+    const rates: RateHistoryDto = {
       '2020-11-07': {
         AUD: 1
-      } as any,
+      },
       '2020-11-08': {
         AUD: 1.2
-      } as any
+      }
     };
 
     const history: CurrencyRateHistory = {
@@ -70,16 +73,16 @@ describe('RateHistoryComponent', () => {
       Promise.resolve(history)
     );
 
-    const navigation: Navigation = {
+    const navigation: Partial<Navigation> = {
       extras: {
         state: {
           baseCurrency: 'ZAR',
           compareRate: 'AUD'
         }
       }
-    } as any;
+    };
 
-    routerSpy.getCurrentNavigation.and.returnValue(navigation);
+    routerSpy.getCurrentNavigation.and.returnValue(navigation as Navigation);
 
     await TestBed.configureTestingModule({
       declarations: [RateHistoryComponent],
@@ -118,11 +121,11 @@ describe('RateHistoryComponent', () => {
   it('should navigate back if created without route data', async () => {
     TestBed.resetTestingModule();
 
-    const navigation: Navigation = {
+    const navigation: Partial<Navigation> = {
       extras: {}
-    } as any;
+    };
 
-    routerSpy.getCurrentNavigation.and.returnValue(navigation);
+    routerSpy.getCurrentNavigation.and.returnValue(navigation as Navigation);
 
     await TestBed.configureTestingModule({
       declarations: [RateHistoryComponent],
@@ -152,7 +155,7 @@ describe('RateHistoryComponent', () => {
       component.navigateBack();
 
       expect(routerSpy.navigate).toHaveBeenCalledWith(['../'], {
-        relativeTo: mockActivatedRoute
+        relativeTo: mockActivatedRoute as ActivatedRoute
       });
     });
   });

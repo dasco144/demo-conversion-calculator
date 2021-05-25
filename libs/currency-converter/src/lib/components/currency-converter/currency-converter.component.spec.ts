@@ -88,7 +88,7 @@ describe('CurrencyConverterComponent', () => {
 
   describe('initialisation', () => {
     it('should handle no rates found for selected unit', fakeAsync(() => {
-      currencyRate.rates = {} as any;
+      currencyRate.rates = {};
 
       fixture.detectChanges();
 
@@ -271,7 +271,7 @@ describe('CurrencyConverterComponent', () => {
       component.navigateToHistory();
 
       expect(routerSpy.navigate).toHaveBeenCalledWith(['history'], {
-        relativeTo: mockActivatedRoute,
+        relativeTo: mockActivatedRoute as ActivatedRoute,
         state: {
           baseCurrency: component.selectedCurrencyRate.base,
           compareRate: component.currencyFormGroup.get('to.currency').value

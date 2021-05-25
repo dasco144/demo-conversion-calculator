@@ -1,5 +1,4 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { DebugElement } from '@angular/core';
 import {
   ComponentFixture,
   fakeAsync,
@@ -20,7 +19,6 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-  let el: DebugElement;
 
   let breakpointObserverSpy: jasmine.SpyObj<BreakpointObserver>;
 
@@ -52,7 +50,6 @@ describe('AppComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
-    el = fixture.debugElement;
   });
 
   it('should create the app', () => {

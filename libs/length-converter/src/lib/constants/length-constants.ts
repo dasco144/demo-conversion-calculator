@@ -7,4 +7,4 @@ export const LENGTH_PRECISION_TOKEN = new InjectionToken<number>(
 
 export const lengthPrecisionAmount = 5;
 
-export const maskRegex = /[^\d\.]/g;
+export const maskRegex = /[^\d.]/g;

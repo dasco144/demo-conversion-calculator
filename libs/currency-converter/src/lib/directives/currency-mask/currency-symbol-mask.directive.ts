@@ -22,7 +22,7 @@ import { CurrencyCodes } from '../../types/currency-codes';
   selector: '[formControlName][demoCurrencySymbolMask]'
 })
 export class CurrencySymbolMaskDirective implements OnChanges {
-  // tslint:disable-next-line: no-input-rename
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('demoCurrencySymbolMask') currencyCode: CurrencyCodes;
 
   private previousValue = '0';
