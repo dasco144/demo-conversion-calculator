@@ -119,7 +119,7 @@ describe('CurrencyService', () => {
       date.setDate(date.getDate() - 7);
       const startDate = date.toISOString().split('T')[0];
       const endDate = new Date().toISOString().split('T')[0];
-      const expectedUrl = `https://api.ratesapi.io/api/history?base=${base}&symbols=${compare}&start_at=${startDate}&end_at=${endDate}`;
+      const expectedUrl = `https://api.exchangerate.host//history?base=${base}&symbols=${compare}&start_at=${startDate}&end_at=${endDate}`;
 
       expect(httpClientSpy.get).toHaveBeenCalledWith(expectedUrl);
       expect(result).toBeTruthy();
@@ -159,7 +159,7 @@ describe('CurrencyService', () => {
       date.setMonth(date.getMonth() - 1);
       const startDate = date.toISOString().split('T')[0];
       const endDate = new Date().toISOString().split('T')[0];
-      const expectedUrl = `https://api.ratesapi.io/api/history?base=${base}&symbols=${compare}&start_at=${startDate}&end_at=${endDate}`;
+      const expectedUrl = `https://api.exchangerate.host//history?base=${base}&symbols=${compare}&start_at=${startDate}&end_at=${endDate}`;
 
       expect(httpClientSpy.get).toHaveBeenCalledWith(expectedUrl);
       expect(result).toBeTruthy();
@@ -199,7 +199,7 @@ describe('CurrencyService', () => {
       date.setFullYear(date.getFullYear() - 1);
       const startDate = date.toISOString().split('T')[0];
       const endDate = new Date().toISOString().split('T')[0];
-      const expectedUrl = `https://api.ratesapi.io/api/history?base=${base}&symbols=${compare}&start_at=${startDate}&end_at=${endDate}`;
+      const expectedUrl = `https://api.exchangerate.host//history?base=${base}&symbols=${compare}&start_at=${startDate}&end_at=${endDate}`;
 
       expect(httpClientSpy.get).toHaveBeenCalledWith(expectedUrl);
       expect(result).toBeTruthy();

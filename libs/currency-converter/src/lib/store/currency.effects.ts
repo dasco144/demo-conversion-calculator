@@ -26,7 +26,7 @@ export class CurrencyEffects {
     private snackBar: MatSnackBar
   ) {}
 
-  readonly basePath = 'https://api.ratesapi.io/api/latest';
+  readonly basePath = 'https://api.exchangerate.host/latest';
   readonly defaultBase = 'ZAR';
 
   loadCurrencyRate$ = createEffect(() =>

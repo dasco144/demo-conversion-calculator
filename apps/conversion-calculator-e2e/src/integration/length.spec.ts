@@ -1,4 +1,4 @@
-describe('length-conversion', function () {
+describe.skip('length-conversion', function () {
   beforeEach(function () {
     cy.server();
     cy.fixture('length-units.json').as('lengthUnits');

@@ -3,7 +3,7 @@ import { getCurrencySymbol } from '@angular/common';
 describe('currency-conversion', function () {
   beforeEach(function () {
     cy.server();
-    cy.route('GET', 'https://api.ratesapi.io/api/latest?base=ZAR').as(
+    cy.route('GET', 'https://api.exchangerate.host/latest?base=ZAR').as(
       'zarRates'
     );
 
@@ -59,7 +59,7 @@ describe('currency-conversion', function () {
       cy.wait('@zarRates').then((xhr) => {
         const zarRate = xhr.response.body as Cypress.ObjectLike;
         const value = '123';
-        const toCurrency = 'AUD';
+        const toCurrency = 'AED';
 
         cy.get('@toForm').find('input[formControlName="value"]').type(value);
 
